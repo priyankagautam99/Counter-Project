@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>counter project</title>
+</head>
+<style>
+    body,html{
+        margin: 0;
+        padding: 0 ;
+        height: 100%;
+    }
+    .container{
+        background-color: black;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .box{
+        background-color: rgb(121, 65, 65); 
+        padding: 30px 70px;
+        border-radius: 20px;
+        text-align: center;
+    }
+    button{
+        background-color: beige;
+        border-radius: 20px;
+        border: 2px solid black;
+        width: 100px;
+        height: 50px;
+    }
+    p{
+        color: white;
+        font-size: 200%;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="box">
+            <p id="number">0</p>
+            <button onclick="minus()">-</button>
+            <button onclick="plus()">+</button>
+        </div>
+    </div>
+    <script>
+        let counter = 0;
+        function plus(){
+            document.getElementById("number").innerHTML = ++counter;
+        }
+        function minus(){
+            document.getElementById("number").innerHTML = --counter;
+        }
+    </script>
+</body>
+</html>
